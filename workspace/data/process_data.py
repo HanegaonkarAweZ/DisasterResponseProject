@@ -72,8 +72,9 @@ def save_data(df, database_filename):
     """Saves DataFrame (df) to database path"""
     name = 'sqlite:///' + database_filename
     engine = create_engine(name)
-    df.to_sql('DisaterResponse', engine, index=False,if_exists='replace')
-    
+    df.to_sql('DisaterResponsefinal', engine, index=False,if_exists='replace')
+
+
 def main():
     if len(sys.argv) == 4:
 

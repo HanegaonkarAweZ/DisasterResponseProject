@@ -42,7 +42,7 @@ def load_data(database_filepath):
        and also target labels list
     """
     engine = create_engine('sqlite:///{}'.format(database_filepath))
-    df = pd.read_sql_table('DisaterResponse', engine)
+    df = pd.read_sql_table('DisaterResponsefinal', engine)
     X = df['message']  
     Y = df.drop(['id','message','original','genre'],axis=1)
     category_names = df.columns[4:]
